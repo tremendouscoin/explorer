@@ -63,7 +63,7 @@ URGENT! Also fix values of exports.wallet pass in lib/settings.js !
 It probably needs to be done due to an oversight in iquidus's code, but, it needs to be done to avoid ECONNREFUSED errors!
 
 ### Open up ports
-3001, 4647, and 27017.
+3001 (or in my case I'm going to put 80 so it's at tremendouscoin.info instead of tremendouscoin.info:3001), 4647, and 27017.
 On your AWS server usng their web interface.
 On Gandi using ufw like https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-14-04
 
@@ -77,6 +77,10 @@ On Gandi using ufw like https://www.digitalocean.com/community/tutorials/how-to-
 To stop the cluster you can use
 
     npm stop
+    
+After you've tested that it works you can keep it going unless you kill it with
+
+    nohup npm start > /dev/null &
 
 ### Syncing database with the blockchain
 
@@ -86,10 +90,19 @@ Note that we type ```nodejs``` instead of ```node``` like they say in the origin
 
 ```
 cd /opt/explorer/
+```
+then
+```
 nodejs scripts/sync.js index update
+```
+or
+```
+nodejs scripts/sync.js index reindex
 ```
 
 ### Example crontab to sync periodically
+
+On gandi first you may need to ```apt-get install cron```
 
 *Example crontab; update index every minute*
 

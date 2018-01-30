@@ -7,7 +7,7 @@
   // name your instance!
   "title": "Tremendouscoin Explorer",
 
-  "address": "127.0.0.1:3001",
+  "address": "127.0.0.1:80",
 
   // coin name
   "coin": "Tremendouscoin",
@@ -29,7 +29,7 @@
   "theme": "Cyborg",
 
   // port to listen for requests on.
-  "port" : 3001,
+  "port" : 80,
 
   // database settings (MongoDB)
   "dbsettings": {
