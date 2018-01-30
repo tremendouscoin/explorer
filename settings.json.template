@@ -26,7 +26,7 @@
   //     Cerulean, Cosmo, Cyborg, Darkly, Flatly, Journal, Lumen, Paper,
   //     Readable, Sandstone, Simplex, Slate, Spacelab, Superhero, United, Yeti
   // theme (see /public/themes for available themes)
-  "theme": "Cyborg",
+  "theme": "Flatly",
 
   // port to listen for requests on.
   "port" : 80,
@@ -68,7 +68,7 @@
     "googleplus": false,
     "search": true,
     "movement": true,
-    "network": true
+    "network": false
   },
 
   // index page (valid options for difficulty are POW, POS or Hybrid)
