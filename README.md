@@ -89,10 +89,9 @@ nodejs scripts/sync.js index update
 
 ### Example crontab to sync periodically
 
-*Example crontab; update index every minute and market data every 2 minutes*
+*Example crontab; update index every minute*
 
     */1 * * * * cd /path/to/explorer && /usr/bin/nodejs scripts/sync.js index update > /dev/null 2>&1
-    */2 * * * * cd /path/to/explorer && /usr/bin/nodejs scripts/sync.js market > /dev/null 2>&1
     */5 * * * * cd /path/to/explorer && /usr/bin/nodejs scripts/peers.js > /dev/null 2>&1
 
 ### Below is the License info from @ https://github.com/iquidus/explorer
