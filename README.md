@@ -13,7 +13,7 @@ We are using the open source block explorer written in node.js from @ https://gi
 Get your AWS Server running using the /doc-tremendouscoin/aws-daemon.md instructions from @ https://github.com/tremendouscoin/tremendouscoin
 
 Except in this case instead of starting the server via ```~/tremendouscoin/src/tremendouscoind &```
-start the server via ```~/tremendouscoin/src/tremendouscoind -txindex```
+start the server via ```~/tremendouscoin/src/tremendouscoind -txindex &```
 
 
 Since you'll be adding Iquidus Explorer to this server, you'll need to
@@ -63,7 +63,9 @@ URGENT! Also fix values of exports.wallet pass in lib/settings.js !
 It probably needs to be done due to an oversight in iquidus's code, but, it needs to be done to avoid ECONNREFUSED errors!
 
 ### Open up ports
-On your AWS server. 3001, 4647, and 27017.
+3001, 4647, and 27017.
+On your AWS server usng their web interface.
+On Gandi using ufw like https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-14-04
 
 ### Start Explorer
 
